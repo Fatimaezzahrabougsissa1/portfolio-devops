@@ -1,5 +1,343 @@
 <!DOCTYPE html>
-<html>
-<head><title>Portfolio</title></head>
-<body><h1>Mon Portfolio</h1></body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatima Ezzahra Bougsissa | Portfolio IA & Big Data / DevOps</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            900: '#14532d',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            border: '#334155'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; }
+        .glow-effect { box-shadow: 0 0 25px rgba(34, 197, 94, 0.15); }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #22c55e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-dark-bg/80 border-b border-dark-border px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold font-mono text-white tracking-wider">
+                <span class="text-brand-500">&lt;</span>FB<span class="text-brand-500">/&gt;</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-brand-500 transition">À propos</a>
+                <a href="#skills" class="hover:text-brand-500 transition">Compétences</a>
+                <a href="#projects" class="hover:text-brand-500 transition">Projets</a>
+                <a href="#experience" class="hover:text-brand-500 transition">Expériences</a>
+                <a href="#certifications" class="hover:text-brand-500 transition">Certifications</a>
+            </div>
+            <a href="mailto:bougsissafatimaezzahra@gmail.com" class="px-4 py-2 text-xs font-semibold rounded-lg bg-brand-500 hover:bg-brand-600 text-slate-950 transition shadow-lg shadow-brand-500/20">
+                <i class="fa-solid me-1 fa-envelope"></i> Me contacter
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-20 md:py-28 flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="space-y-6 md:w-2/3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-500 text-xs font-mono">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                </span>
+                Recherche Stage PFE (Février 2027)
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+                Fatima Ezzahra <br>
+                <span class="gradient-text">Bougsissa</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 font-light leading-relaxed">
+                Future Ingénieure d'État en <strong class="text-slate-200">Intelligence Artificielle & Big Data</strong> à HESTIM. Spécialisée dans les pipelines IA multi-agents, la Vision par Ordinateur, les LLM/RAG et l'automatisation DevOps/MLOps.
+            </p>
+            
+            <!-- Quick Links -->
+            <div class="flex flex-wrap gap-4 pt-2">
+                <a href="https://github.com/Fatimaezzahrabougsissa1" target="_blank" class="px-4 py-2.5 rounded-lg bg-dark-card border border-dark-border text-slate-300 hover:text-white hover:border-slate-500 transition flex items-center gap-2 text-sm font-medium">
+                    <i class="fa-brands fa-github text-lg"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/fatima-ezzahra-bougsissa" target="_blank" class="px-4 py-2.5 rounded-lg bg-dark-card border border-dark-border text-slate-300 hover:text-white hover:border-slate-500 transition flex items-center gap-2 text-sm font-medium">
+                    <i class="fa-brands fa-linkedin text-lg text-blue-400"></i> LinkedIn
+                </a>
+                <a href="https://github.com/Fatimaezzahrabougsissa1/portfolio-devops/actions" target="_blank" class="px-4 py-2.5 rounded-lg bg-brand-500/10 border border-brand-500/40 text-brand-500 hover:bg-brand-500/20 transition flex items-center gap-2 text-sm font-mono">
+                    <i class="fa-solid fa-circle-check text-brand-500"></i> CI/CD Pipeline Status: PASSING
+                </a>
+            </div>
+        </div>
+
+        <!-- Profile Avatar Card -->
+        <div class="md:w-1/3 w-full flex justify-center">
+            <div class="relative w-64 h-64 md:w-72 md:h-72 rounded-2xl bg-gradient-to-tr from-brand-500 to-sky-500 p-1 glow-effect">
+                <div class="w-full h-full bg-dark-card rounded-2xl flex flex-col justify-center items-center text-center p-6 space-y-4">
+                    <div class="w-20 h-20 rounded-full bg-slate-800 border-2 border-brand-500 flex items-center justify-center text-3xl text-brand-500 font-mono font-bold">
+                        FB
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-lg">Fatima Ezzahra</h3>
+                        <p class="text-xs text-slate-400">Casablanca, Maroc</p>
+                    </div>
+                    <div class="text-xs font-mono text-slate-400 bg-slate-900/80 px-3 py-1.5 rounded-md border border-dark-border">
+                        HESTIM • 5ᵉ Année
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-dark-card/50 border-y border-dark-border">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                <i class="fa-solid fa-code text-brand-500"></i> Compétences Techniques
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- AI & Data -->
+                <div class="bg-dark-card p-6 rounded-xl border border-dark-border">
+                    <h3 class="text-brand-500 font-mono text-sm font-semibold mb-4 uppercase tracking-wider">IA & Data Science</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">Python</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">PyTorch</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">TensorFlow</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">YOLOv8</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">Qwen2.5-VL</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">Pandas / NumPy</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">LLM / RAG</span>
+                    </div>
+                </div>
+                <!-- Agentic AI & Data Governance -->
+                <div class="bg-dark-card p-6 rounded-xl border border-dark-border">
+                    <h3 class="text-sky-400 font-mono text-sm font-semibold mb-4 uppercase tracking-wider">Agentic AI & Governance</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">LangChain</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">LangGraph</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">ReAct Pattern</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">MCP Protocol</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">OpenMetadata</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">SQL / NoSQL</span>
+                    </div>
+                </div>
+                <!-- DevOps & Infrastructure -->
+                <div class="bg-dark-card p-6 rounded-xl border border-dark-border">
+                    <h3 class="text-emerald-400 font-mono text-sm font-semibold mb-4 uppercase tracking-wider">DevOps & Edge Computing</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">Docker</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">GitHub Actions CI/CD</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">Raspberry Pi</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">TinyML</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">Git / GitHub</span>
+                        <span class="px-3 py-1 rounded-md text-xs bg-slate-800 text-slate-300 border border-slate-700">Ollama / Groq API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold mb-10 flex items-center gap-3">
+            <i class="fa-solid fa-diagram-project text-brand-500"></i> Projets Réalisés
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Project 1: Pipeline IA Allianz -->
+            <div class="bg-dark-card rounded-xl border border-dark-border p-6 hover:border-slate-600 transition flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-mono px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Stage Allianz Maroc</span>
+                        <i class="fa-solid fa-car-burst text-slate-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Pipeline IA & OCR Bilingue Automatique</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                        Conception d'un système multi-agents pour la détection/segmentation de dommages automobiles (YOLOv8m-seg, mAP@50 ≈ 70%), extraction bilingue FR/AR (Qwen2.5-VL 7B local) et estimation financière via Llama 3.3-70B.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-dark-border/50">
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">YOLOv8</span>
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">Qwen2.5-VL</span>
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">Llama 3.3</span>
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">Local Deployment</span>
+                </div>
+            </div>
+
+            <!-- Project 2: IoT Hospital Intrusion (1st Place) -->
+            <div class="bg-dark-card rounded-xl border border-dark-border p-6 hover:border-slate-600 transition flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute -right-12 -top-12 w-28 h-28 bg-amber-500/10 rounded-full blur-xl"></div>
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-mono px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center gap-1">
+                            <i class="fa-solid fa-trophy"></i> 1ᵉʳ Prix Concours IoT
+                        </span>
+                        <i class="fa-solid fa-shield-halved text-slate-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Détection d'Intrusion IoMT Hôpital Connecté</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                        Système embarqué sur Raspberry Pi pour la détection d'attaques réseau (DDoS, spoofing) en milieu hospitalier. Arbre de décision optimisé atteignant 93% de précision et une réduction énergétique de 95%.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-dark-border/50">
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">Raspberry Pi</span>
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">Machine Learning</span>
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">IoMT Security</span>
+                </div>
+            </div>
+
+            <!-- Project 3: OpenMetadata Data Governance -->
+            <div class="bg-dark-card rounded-xl border border-dark-border p-6 hover:border-slate-600 transition flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-mono px-2.5 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">Data Governance</span>
+                        <i class="fa-solid fa-database text-slate-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Gouvernance des Données Logistiques</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                        Mise en place de la plateforme OpenMetadata pour centraliser, documenter et fiabiliser la chaîne logistique multi-applications d'entreprise (référentiels maîtres, dictionnaire de données et lineage).
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-dark-border/50">
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">OpenMetadata</span>
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">MDM</span>
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">Data Lineage</span>
+                </div>
+            </div>
+
+            <!-- Project 4: DevOps Automated Pipeline -->
+            <div class="bg-dark-card rounded-xl border border-dark-border p-6 hover:border-slate-600 transition flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-mono px-2.5 py-1 rounded bg-brand-500/10 text-brand-400 border border-brand-500/20">CI/CD & Containerisation</span>
+                        <i class="fa-brands fa-docker text-slate-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Pipeline CI/CD Portfolio DevOps</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                        Automatisation complète du workflow d'intégration et de déploiement continu via GitHub Actions (exécutions de tests Python automatisés, build d'image Nginx Docker et déploiement continu).
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-dark-border/50">
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">GitHub Actions</span>
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">Docker</span>
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">Python Testing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="py-16 bg-dark-card/30 border-t border-dark-border">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Experience Column -->
+            <div>
+                <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                    <i class="fa-solid fa-briefcase text-brand-500"></i> Expériences
+                </h2>
+                <div class="space-y-6 border-l-2 border-dark-border pl-6">
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-brand-500"></span>
+                        <h3 class="font-bold text-white">Stagiaire Ingénieure IA</h3>
+                        <p class="text-xs text-brand-500 font-mono">Allianz Maroc • Mai - Juillet 2026</p>
+                        <p class="text-sm text-slate-400 mt-2">Développement d'un pipeline complet IA & OCR bilingue pour l'analyse automatisée de sinistres automobiles.</p>
+                    </div>
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-600"></span>
+                        <h3 class="font-bold text-white">Stagiaire Développement Web</h3>
+                        <p class="text-xs text-slate-400 font-mono">Afric Phar • Mai - Juillet 2024</p>
+                        <p class="text-sm text-slate-400 mt-2">Application web Full-Stack Spring Boot/Angular intégrée à l'ERP SAP pour la gestion commerciale.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Column -->
+            <div>
+                <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+                    <i class="fa-solid fa-graduation-cap text-sky-400"></i> Formations
+                </h2>
+                <div class="space-y-6 border-l-2 border-dark-border pl-6">
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-sky-400"></span>
+                        <h3 class="font-bold text-white">Cycle Ingénieur d'État en IA & Big Data</h3>
+                        <p class="text-xs text-sky-400 font-mono">HESTIM • 5ᵉ Année (En cours)</p>
+                        <p class="text-sm text-slate-400 mt-2">Spécialisation en Deep Learning, MLOps, Gouvernance des données et Systèmes Multi-agents.</p>
+                    </div>
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-600"></span>
+                        <h3 class="font-bold text-white">Licence en Génie Informatique</h3>
+                        <p class="text-xs text-slate-400 font-mono">FST Settat • 2024</p>
+                        <p class="text-sm text-slate-400 mt-2">Fondations solides en génie logiciel, algorithmique et bases de données.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+            <i class="fa-solid fa-certificate text-amber-400"></i> Certifications & Distinctions
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-dark-card p-4 rounded-lg border border-dark-border flex items-center gap-3">
+                <i class="fa-brands fa-google text-2xl text-red-400"></i>
+                <div>
+                    <h4 class="text-sm font-bold text-white">Google AI Essentials</h4>
+                    <p class="text-xs text-slate-400">Google / Coursera</p>
+                </div>
+            </div>
+            <div class="bg-dark-card p-4 rounded-lg border border-dark-border flex items-center gap-3">
+                <i class="fa-solid fa-brain text-2xl text-blue-400"></i>
+                <div>
+                    <h4 class="text-sm font-bold text-white">IBM AI Engineering</h4>
+                    <p class="text-xs text-slate-400">IBM / Coursera</p>
+                </div>
+            </div>
+            <div class="bg-dark-card p-4 rounded-lg border border-dark-border flex items-center gap-3">
+                <i class="fa-solid fa-network-wired text-2xl text-emerald-400"></i>
+                <div>
+                    <h4 class="text-sm font-bold text-white">Cisco CCNA 1</h4>
+                    <p class="text-xs text-slate-400">Cisco Networking Academy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-dark-border py-8 bg-dark-card/80 text-center text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>© 2026 Fatima Ezzahra Bougsissa. Tous droits réservés.</p>
+            <p class="font-mono text-slate-400">Déployé automatiquement via GitHub Actions & Docker 🟢</p>
+        </div>
+    </footer>
+
+</body>
 </html>
